@@ -1,7 +1,7 @@
 name: kameleon
 description: Make Design Language System easy
 version: 0.0.1-alpha
-author: Felipe Costa (#Felipe00)
+author: Felipe Costa <fcostax02@gmail.com>
 homepage: https://github.com/Felipe00/kameleon
 
 environment:
