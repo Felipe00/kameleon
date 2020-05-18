@@ -1,23 +1,36 @@
-library aokameleon;
+library kameleon;
 
 import 'package:flutter/material.dart';
 
-extension RaisedButtonKameleon on RaisedButton {
-  RaisedButton applyKamouflage(
-      {@required BuildContext context, bool roundedCorners = true}) {
-    return RaisedButton(
-      padding: EdgeInsets.all(14),
+applyKamouflage() {
+  return ThemeData(
+    primaryColor: const Color.fromRGBO(250, 250, 250, 1),
+    accentColor: const Color.fromRGBO(45, 162, 170, 1),
+    fontFamily: 'OpenSans',
+    inputDecorationTheme: InputDecorationTheme(
+      border: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(5),
+        borderSide: const BorderSide(
+            color: const Color.fromRGBO(0, 0, 0, 0.1), width: 1.0),
+      ),
+    ),
+    appBarTheme: AppBarTheme(
       elevation: 0,
-      child: this.child,
-      onPressed: this.onPressed,
-      disabledTextColor: Colors.white,
+    ),
+    textTheme: TextTheme(
+        bodyText1: const TextStyle(fontSize: 16),
+        button: TextStyle(
+          fontWeight: FontWeight.w600,
+          fontSize: 14,
+        )),
+    buttonTheme: ButtonThemeData(
+      minWidth: 2000,
       textTheme: ButtonTextTheme.primary,
-      color: this.color ?? Theme.of(context).accentColor,
-      shape: roundedCorners
-          ? RoundedRectangleBorder(borderRadius: BorderRadius.circular(100))
-          : null,
-      disabledColor: this.color?.withOpacity(0.4) ??
-          Theme.of(context).accentColor.withOpacity(0.4),
-    );
-  }
+      buttonColor: const Color.fromRGBO(45, 162, 170, 1),
+      height: 48,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(25.0),
+      ),
+    ),
+  );
 }
