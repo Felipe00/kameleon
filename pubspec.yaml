@@ -1,6 +1,6 @@
 name: kameleon
-description: Make Design Language System easy
-version: 0.0.2-alpha
+description: Kameleon is a pre-built theme. Useful if you do not want waste time making design.
+version: 0.0.3-alpha
 homepage: https://github.com/Felipe00/kameleon
 
 environment:
@@ -14,22 +14,10 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
 
-# For information on the generic Dart part of this file, see the
-# following page: https://dart.dev/tools/pub/pubspec
-
-# The following section is specific to Flutter.
 flutter:
 
-  # To add assets to your package, add an assets section, like this:
-  # assets:
-  #   - images/a_dot_burr.jpeg
-  #   - images/a_dot_ham.jpeg
-  #
-  # For details regarding assets in packages, see
-  # https://flutter.dev/assets-and-images/#from-packages
-  #
-  # An image asset can refer to one or more resolution-specific "variants", see
-  # https://flutter.dev/assets-and-images/#resolution-aware.
+  # assets here
+
   fonts:
     - family: OpenSans
       fonts:
@@ -43,6 +31,3 @@ flutter:
         - asset: assets/fonts/OpenSans-Regular.ttf
         - asset: assets/fonts/OpenSans-SemiBold.ttf
         - asset: assets/fonts/OpenSans-SemiBoldItalic.ttf
-  #
-  # For details regarding fonts in packages, see
-  # https://flutter.dev/custom-fonts/#from-packages

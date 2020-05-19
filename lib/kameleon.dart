@@ -2,10 +2,22 @@ library kameleon;
 
 import 'package:flutter/material.dart';
 
-applyKamouflage() {
+const accentKameleon = Color.fromRGBO(45, 162, 170, 1);
+const primaryKameleon = Color.fromRGBO(250, 250, 250, 1);
+const appBarNoElevation = 0.0;
+const appBarMiddleElevation = 8.0;
+const appBarHiggerElevation = 16.0;
+
+///
+/// Put this method on theme property in [MaterialApp]
+///
+applyKamouflage(
+    {Color primaryColor,
+    Color accentColor,
+    double elevationBarTheme = appBarNoElevation}) {
   return ThemeData(
-    primaryColor: const Color.fromRGBO(250, 250, 250, 1),
-    accentColor: const Color.fromRGBO(45, 162, 170, 1),
+    primaryColor: primaryColor != null ? primaryColor : primaryKameleon,
+    accentColor: accentColor != null ? accentColor : accentKameleon,
     fontFamily: 'OpenSans',
     inputDecorationTheme: InputDecorationTheme(
       border: OutlineInputBorder(
@@ -15,7 +27,7 @@ applyKamouflage() {
       ),
     ),
     appBarTheme: AppBarTheme(
-      elevation: 0,
+      elevation: elevationBarTheme,
     ),
     textTheme: TextTheme(
         bodyText1: const TextStyle(fontSize: 16),
@@ -26,7 +38,7 @@ applyKamouflage() {
     buttonTheme: ButtonThemeData(
       minWidth: 2000,
       textTheme: ButtonTextTheme.primary,
-      buttonColor: const Color.fromRGBO(45, 162, 170, 1),
+      buttonColor: accentColor != null ? accentColor : accentKameleon,
       height: 48,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(25.0),
